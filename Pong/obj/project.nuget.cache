@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "UdNxH+aUkhQ=",
+  "success": true,
+  "projectFilePath": "/home/satvik/RiderProjects/Pong/Pong/Pong.csproj",
+  "expectedPackageFiles": [
+    "/home/satvik/.nuget/packages/microsoft.dotnet.ilcompiler/10.0.14/microsoft.dotnet.ilcompiler.10.0.14.nupkg.sha512",
+    "/home/satvik/.nuget/packages/microsoft.net.illink.tasks/10.0.14/microsoft.net.illink.tasks.10.0.14.nupkg.sha512",
+    "/home/satvik/.nuget/packages/runtime.linux-x64.microsoft.dotnet.ilcompiler/10.0.14/runtime.linux-x64.microsoft.dotnet.ilcompiler.10.0.14.nupkg.sha512",
+    "/home/satvik/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/10.0.14/microsoft.netcore.app.runtime.linux-x64.10.0.14.nupkg.sha512",
+    "/home/satvik/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/10.0.14/microsoft.aspnetcore.app.runtime.linux-x64.10.0.14.nupkg.sha512",
+    "/home/satvik/.nuget/packages/microsoft.netcore.app.runtime.nativeaot.linux-x64/10.0.14/microsoft.netcore.app.runtime.nativeaot.linux-x64.10.0.14.nupkg.sha512",
+    "/home/satvik/.nuget/packages/runtime.linux-x64.microsoft.dotnet.ilcompiler/10.0.14/runtime.linux-x64.microsoft.dotnet.ilcompiler.10.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}
