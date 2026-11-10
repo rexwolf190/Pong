@@ -12,3 +12,4 @@
 /home/satvik/RiderProjects/Pong/Pong/obj/Debug/net10.0/Pong.pdb
 /home/satvik/RiderProjects/Pong/Pong/obj/Debug/net10.0/Pong.genruntimeconfig.cache
 /home/satvik/RiderProjects/Pong/Pong/obj/Debug/net10.0/ref/Pong.dll
+/home/satvik/RiderProjects/Pong/Pong/obj/Debug/net10.0/Pong.sourcelink.json
