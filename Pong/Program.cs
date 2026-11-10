@@ -21,12 +21,16 @@ class Program
     static void Main()
     {
         RenderGrid();
-        Console.ReadLine();
+        while (true)
+        {
+            GetInput();
+            RenderGrid();
+        }
     }
 
     static void RenderGrid()
     {
-        // Clear the grid
+        
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
@@ -40,7 +44,7 @@ class Program
 
         Console.Clear();
 
-        // Print the grid
+        
         for (int y = 0; y < height; y++)
         {
             for (int x = 0; x < width; x++)
@@ -63,6 +67,32 @@ class Program
         {
             grid[leftPaddleX, leftPaddleY + i] = '|';
             grid[rightPaddleX, rightPaddleY + i] = '|';
+        }
+    }
+
+    static void GetInput()
+    {
+        
+        ConsoleKey input = Console.ReadKey().Key;
+
+        switch (input)
+        {
+            case ConsoleKey.W:
+                if (leftPaddleY == 2 + paddleHeight)
+                {
+                    leftPaddleY = leftPaddleY;
+                    break;
+                }
+                leftPaddleY--;
+                break;
+            case ConsoleKey.S:
+                if (leftPaddleY == height - paddleHeight)
+                {
+                    leftPaddleY = leftPaddleY;
+                    break;
+                }
+                leftPaddleY++;
+                break;
         }
     }
 }
