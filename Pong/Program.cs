@@ -1,4 +1,6 @@
-﻿namespace Pong;
+﻿using System.Data;
+
+namespace Pong;
 
 class Program
 {
@@ -16,14 +18,21 @@ class Program
     private static int rightPaddleX = width - 2;
     private static int rightPaddleY = (height - paddleHeight) / 2;
 
+    private static ConsoleKey input;
+    
+    private static int ballXV = 0;
+    private static int ballYV = 1;
+    
     private static char[,] grid = new char[width, height];
 
-    static void Main()
+    static void Main() 
     {
+        
         RenderGrid();
         while (true)
         {
-            GetInput();
+            BallMove();
+            RobotMove();
             RenderGrid();
         }
     }
@@ -73,26 +82,64 @@ class Program
     static void GetInput()
     {
         
-        ConsoleKey input = Console.ReadKey().Key;
+        
+        if (Console.KeyAvailable)
+        {
+            input = Console.ReadKey().Key;
+        }
+        
+        
 
         switch (input)
         {
             case ConsoleKey.W:
-                if (leftPaddleY == 2 + paddleHeight)
-                {
-                    leftPaddleY = leftPaddleY;
-                    break;
-                }
-                leftPaddleY--;
+                if (leftPaddleY > 0)
+                    leftPaddleY--;
                 break;
+
             case ConsoleKey.S:
-                if (leftPaddleY == height - paddleHeight)
-                {
-                    leftPaddleY = leftPaddleY;
-                    break;
-                }
-                leftPaddleY++;
+                if (leftPaddleY < height - paddleHeight)
+                    leftPaddleY++;
                 break;
+                    
         }
     }
+
+    static void BallMove()
+    {
+       ballY += ballYV;
+
+       if (ballY <= 1 || ballY >= height - 1)
+       {
+           ballYV = -ballYV;
+       }
+    }
+    readonly record struct InputState(int leftPaddleDir, int rightPaddleDir);
+
+    static void RobotMove()
+    {
+        
+            int paddleCenter = rightPaddleY + paddleHeight / 2;
+
+            if (paddleCenter < ballY && rightPaddleY < height - paddleHeight)
+            {
+                rightPaddleY++;
+            }
+            else if (paddleCenter > ballY && rightPaddleY > 0)
+            {
+                rightPaddleY--;
+            }
+        
+    }
+
+    InputState GetInputState()
+    {
+        
+    }
+
+    static void Update(InputState input, TimeSpan elapsed)
+    {
+        
+    }
+    
 }
